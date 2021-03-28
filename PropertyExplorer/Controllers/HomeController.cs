@@ -29,6 +29,10 @@ namespace PropertyExplorer.Controllers
             return "This is test";
 
         }
+        public IActionResult CreateListing()
+        {
+            return View();
+        }
 
         public IActionResult Privacy()
         {
