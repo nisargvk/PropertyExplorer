@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace PropertyExplorer.Models
 {
-    public class HomeListingOperations
+    public class HomeListingOperations 
     {
     }
 }
