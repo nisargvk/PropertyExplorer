@@ -21,6 +21,13 @@ namespace PropertyExplorer.Controllers
             this.userRepository = userRepository;
 
         }
+
+        public IActionResult SignUp()
+        {
+            return View();
+        }
+
+
         [HttpPost]
         public IActionResult SignUp(User user, string RoleName)
         {
@@ -36,6 +43,14 @@ namespace PropertyExplorer.Controllers
             }
             return View();
         }
+
+
+        public IActionResult Login()
+        {
+
+            return View();
+        }
+
         [HttpPost]
         public IActionResult Login(User user, string ReturnUrl)
         {

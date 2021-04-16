@@ -32,7 +32,8 @@ namespace PropertyExplorer.Models
         public string Phone { get; set; }
 
 
-        [ForeignKey("UserType")]
+        [ForeignKey("roleId")]
+        [Column("roleId")]
         public int UserType { get; set; }
 
 
