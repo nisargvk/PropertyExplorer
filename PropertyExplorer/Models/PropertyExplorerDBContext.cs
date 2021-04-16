@@ -13,5 +13,6 @@ namespace PropertyExplorer.Models
         public PropertyExplorerDBContext(DbContextOptions<PropertyExplorerDBContext> options) : base(options) { }
         public Microsoft.EntityFrameworkCore.DbSet<User> user { get; set; }
         public Microsoft.EntityFrameworkCore.DbSet<HomeListing> homes { get; set; }
+        public Microsoft.EntityFrameworkCore.DbSet<FavouriteList> favourite { get; set; }
     }
 }

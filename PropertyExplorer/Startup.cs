@@ -32,6 +32,7 @@ namespace PropertyExplorer
             services.AddDbContext<PropertyExplorerDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("MyConnection")));
             services.AddScoped<Models.IUserRepository, Models.UserOperation>();
             services.AddScoped<Models.IHomeListingRepository, Models.HomeListingOperations>();
+            services.AddScoped<Models.IFavouriteProperty, Models.FavouriteListOperation>();
             services.AddControllersWithViews();
             services.AddSession();
 
