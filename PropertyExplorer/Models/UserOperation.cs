@@ -7,8 +7,8 @@ namespace PropertyExplorer.Models
 {
     public class UserOperation : IUserRepository
     {
-        private RealEstateDBContext context;
-        public UserOperation(RealEstateDBContext context)
+        private PropertyExplorerDBContext context;
+        public UserOperation(PropertyExplorerDBContext context)
         {
             this.context = context;
         }

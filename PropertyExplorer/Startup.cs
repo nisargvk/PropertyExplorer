@@ -1,8 +1,10 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using PropertyExplorer.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +24,16 @@ namespace PropertyExplorer
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            
+            
+
+            services.AddDistributedMemoryCache();
+
+            services.AddDbContext<PropertyExplorerDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("MyConnection")));
+            services.AddScoped<Models.IUserRepository, Models.UserOperation>();
+
             services.AddControllersWithViews();
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
