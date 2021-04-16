@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace PropertyExplorer.Models
 {
-    interface IFavouriteProperty
+    public interface IFavouriteProperty
     {
         
         IEnumerable<FavouriteList> GetAllFavtProperty();

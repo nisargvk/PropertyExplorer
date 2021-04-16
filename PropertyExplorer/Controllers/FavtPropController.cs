@@ -11,6 +11,13 @@ namespace GropProject3.Controllers
     {
         private readonly IFavouriteProperty client;
 
+        public FavtPropController(IFavouriteProperty client)
+        {
+
+            this.client = client;
+
+        }
+
         public IActionResult FavouriteProperties()
         {
 
