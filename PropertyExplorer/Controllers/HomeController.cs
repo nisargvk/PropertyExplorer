@@ -23,17 +23,7 @@ namespace PropertyExplorer.Controllers
             return View();
         }
 
-        public string Test()
-        {
-
-            return "This is test";
-
-        }
-        public IActionResult CreateListing()
-        {
-            return View();
-        }
-
+      
         public IActionResult Privacy()
         {
             return View();
